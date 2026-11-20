@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Shop Manager — Payments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- Hidden checkbox: remembers if the menu is open (replaces JavaScript) -->
+  <input type="checkbox" id="menu-state" class="menu-state" aria-label="Toggle Main Menu">
+
+  <header class="topbar">
+    <label class="menu-toggle" for="menu-state" aria-label="Open Main Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </label>
+    <input class="search" type="search" placeholder="Search..." aria-label="Search">
+    <button class="profile" type="button">User Profile</button>
+  </header>
+
+  <label class="drawer-backdrop" for="menu-state" aria-label="Close menu"></label>
+  <aside class="sidebar" id="sidebar" aria-label="Main Menu">
+    <label class="sidebar-close" for="menu-state" aria-label="Close menu">×</label>
+    <div class="sidebar-brand">Laundry Shop Management System</div>
+    <p class="sidebar-heading">Main Menu</p>
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="service_type.html">Service Type</a>
+        <a href="laundry-orders.html">Laundry Orders</a>
+        <a class="active" href="payments.html">Payments</a>
+    </nav>
+  </aside>
+
+  <main class="content payments-content" id="payments">
+    <div class="heading-row"><h1>Payments</h1></div>
+    <p class="subtitle">Record and review payments made for laundry orders.</p>
+
+    <section class="summary-grid payments-summary" aria-label="Payment summary">
+      <article class="summary-card"><p>Total Payments</p><strong>5</strong></article>
+      <article class="summary-card"><p>Total Collected</p><strong>₱ 5,510.00</strong></article>
+      <article class="summary-card"><p>Cash</p><strong>₱ 3,400.00</strong></article>
+      <article class="summary-card"><p>GCash / Maya</p><strong>₱ 2,110.00</strong></article>
+    </section>
+
+    <div class="table-wrap">
+      <table class="wide-table payments-table">
+        <thead>
+          <tr><th>Payment</th><th>Order</th><th>Customer</th><th>Date</th><th>Method</th><th class="num">Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>1</td><td>Kyla Perillo</td><td>2026-11-16</td><td><span class="badge badge-cash">Cash</span></td><td class="num">950.00</td></tr>
+          <tr><td>2</td><td>2</td><td>Angela Reyes</td><td>2026-11-16</td><td><span class="badge badge-gcash">GCash</span></td><td class="num">1,750.00</td></tr>
+          <tr><td>3</td><td>3</td><td>Jessica Cruz</td><td>2026-11-17</td><td><span class="badge badge-cash">Cash</span></td><td class="num">950.00</td></tr>
+          <tr><td>4</td><td>4</td><td>Jhoy Garcia</td><td>2026-11-17</td><td><span class="badge badge-maya">Maya</span></td><td class="num">360.00</td></tr>
+          <tr><td>5</td><td>5</td><td>Angie Lopez</td><td>2026-11-17</td><td><span class="badge badge-cash">Cash</span></td><td class="num">1,500.00</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td colspan="5">Total</td><td class="num">5,510.00</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <section class="form-panel">
+      <h2>Add Payment</h2>
+      <form class="form-grid">
+        <div class="form-field"><label for="p-order">Order</label>
+          <select id="p-order" class="field-select"><option value="" selected disabled>Select order</option>
+            <option value="1">Order 1 — Kyla Perillo</option>
+            <option value="2">Order 2 — Angela Reyes</option>
+            <option value="3">Order 3 — Jessica Cruz</option>
+            <option value="4">Order 4 — Jhoy Garcia</option>
+            <option value="5">Order 5 — Angie Lopez</option>
+          </select></div>
+        <div class="form-field"><label for="p-amount">Amount</label>
+          <input id="p-amount" type="number" min="0.01" step="0.01" placeholder="0.00"></div>
+        <div class="form-field"><label for="p-method">Payment Method</label>
+          <select id="p-method" class="field-select"><option>Cash</option><option>GCash</option><option>Maya</option></select></div>
+        <button class="btn btn-add form-submit" type="button">Add Payment</button>
+      </form>
+    </section>
+  </main>
+</div>
+</body>
+</html>

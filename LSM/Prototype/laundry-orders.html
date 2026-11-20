@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Shop Manager — Laundry Orders</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <input type="checkbox" id="menu-state" class="menu-state" aria-label="Toggle Main Menu">
+
+  <header class="topbar">
+    <label class="menu-toggle" for="menu-state" aria-label="Open Main Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </label>
+    <input class="search" type="search" placeholder="Search..." aria-label="Search">
+    <button class="profile" type="button">User Profile</button>
+  </header>
+
+  <label class="drawer-backdrop" for="menu-state" aria-label="Close menu"></label>
+  <aside class="sidebar" id="sidebar" aria-label="Main Menu">
+    <label class="sidebar-close" for="menu-state" aria-label="Close menu">×</label>
+    <div class="sidebar-brand">Laundry Shop Management System</div>
+    <p class="sidebar-heading">Main Menu</p>
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a href="service_type.html">Service Type</a>
+        <a class="active" href="laundry-orders.html">Laundry Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+  </aside>
+
+  <main class="content orders-content" id="laundry-orders">
+    <div class="heading-row"><h1>Laundry Orders</h1></div>
+   
+
+    <div class="table-wrap">
+      <table class="wide-table orders-table">
+        <thead>
+          <tr><th>Order</th><th>Customer</th><th>Staff</th><th>Order Date</th><th>Due Date</th><th>Status</th><th class="num">Total</th><th class="num">Paid</th><th class="num">Balance</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Kyla Perillo</td><td>Liza Mendoza</td><td>2026-09-25 09:00</td><td>2026-09-26 09:00</td><td><span class="badge badge-ready">Ready</span></td><td class="num">950.00</td><td class="num">950.00</td><td class="num">0.00</td></tr>
+          <tr><td>2</td><td>Angela Reyes</td><td>Liza Mendoza</td><td>2026-09-25 10:30</td><td>2026-09-27 10:30</td><td><span class="badge badge-washing">Washing</span></td><td class="num">1,750.00</td><td class="num">1,750.00</td><td class="num">0.00</td></tr>
+          <tr><td>3</td><td>Jessica Cruz</td><td>Liza Mendoza</td><td>2026-09-26 08:15</td><td>2026-09-28 08:15</td><td><span class="badge badge-received">Received</span></td><td class="num">950.00</td><td class="num">950.00</td><td class="num">0.00</td></tr>
+          <tr><td>4</td><td>Jhoy Garcia</td><td>Nina Flores</td><td>2026-09-26 13:00</td><td>2026-09-28 13:00</td><td><span class="badge badge-drying">Drying</span></td><td class="num">360.00</td><td class="num">360.00</td><td class="num">0.00</td></tr>
+          <tr><td>5</td><td>Angie Lopez</td><td>Liza Mendoza</td><td>2026-09-27 09:20</td><td>2026-09-28 09:20</td><td><span class="badge badge-released">Released</span></td><td class="num">1,500.00</td><td class="num">1,500.00</td><td class="num">0.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="form-panel">
+      <h2>Order Items</h2>
+      <div class="table-wrap">
+        <table class="wide-table items-table">
+          <thead>
+            <tr><th>Order</th><th>Item No</th><th>Service</th><th class="num">Quantity</th><th class="num">Weight (kg)</th><th class="num">Unit Price</th><th class="num">Subtotal</th></tr>
+          </thead>
+          <tbody>
+          <tr><td>1</td><td>1</td><td>Wash and Fold</td><td class="num">5.00</td><td class="num">5.00</td><td class="num">150.00</td><td class="num">750.00</td></tr>
+          <tr><td>1</td><td>2</td><td>Ironing</td><td class="num">2.00</td><td class="num">—</td><td class="num">100.00</td><td class="num">200.00</td></tr>
+          <tr><td>2</td><td>1</td><td>Wash Dry Fold</td><td class="num">7.00</td><td class="num">7.00</td><td class="num">250.00</td><td class="num">1,750.00</td></tr>
+          <tr><td>3</td><td>1</td><td>Wash and Fold</td><td class="num">4.00</td><td class="num">4.00</td><td class="num">150.00</td><td class="num">600.00</td></tr>
+          <tr><td>3</td><td>2</td><td>Comforter Cleaning</td><td class="num">1.00</td><td class="num">—</td><td class="num">350.00</td><td class="num">350.00</td></tr>
+          <tr><td>4</td><td>1</td><td>Dry Cleaning</td><td class="num">2.00</td><td class="num">—</td><td class="num">180.00</td><td class="num">360.00</td></tr>
+          <tr><td>5</td><td>1</td><td>Wash Dry Fold</td><td class="num">6.00</td><td class="num">6.00</td><td class="num">250.00</td><td class="num">1,500.00</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="form-panel">
+      <h2>Add Laundry Order</h2>
+      <form class="form-grid">
+        <div class="form-field"><label for="o-customer">Customer</label>
+          <select id="o-customer" class="field-select"><option value="" selected disabled>Select customer</option>
+            <option value="1">Kyla Perillo</option>
+            <option value="2">Angela Reyes</option>
+            <option value="3">Jessica Cruz</option>
+            <option value="4">Jhoy Garcia</option>
+            <option value="5">Angie Lopez</option>
+          </select></div>
+        <div class="form-field"><label for="o-staff">Staff</label>
+          <select id="o-staff" class="field-select"><option value="" selected disabled>Select staff</option>
+            <option value="1">Liza Mendoza (Cashier)</option>
+            <option value="2">Carlo Ramos (Laundry Attendant)</option>
+            <option value="3">Nina Flores (Manager)</option>
+          </select></div>
+        <div class="form-field"><label for="o-due">Due Date</label>
+          <input id="o-due" type="datetime-local"></div>
+        <div class="form-field"><label for="o-status">Status</label>
+          <select id="o-status" class="field-select"><option>Received</option><option>Washing</option><option>Drying</option><option>Ready</option><option>Released</option><option>Cancelled</option></select></div>
+        <div class="form-field"><label for="o-service">Service</label>
+          <select id="o-service" class="field-select"><option value="" selected disabled>Select service</option>
+            <option value="1">Wash and Fold — ₱150.00 / KG</option>
+            <option value="2">Wash Dry Fold — ₱250.00 / KG</option>
+            <option value="3">Dry Cleaning — ₱180.00 / PIECE</option>
+            <option value="4">Comforter Cleaning — ₱350.00 / PIECE</option>
+            <option value="5">Ironing — ₱100.00 / PIECE</option>
+          </select></div>
+        <div class="form-field"><label for="o-qty">Quantity</label>
+          <input id="o-qty" type="number" min="0.01" step="0.01" placeholder="0.00"></div>
+        <div class="form-field"><label for="o-weight">Weight (kg)</label>
+          <input id="o-weight" type="number" min="0.01" step="0.01" placeholder="Optional"></div>
+        <div class="form-field"><label for="o-notes">Notes</label>
+          <input id="o-notes" type="text" maxlength="255" placeholder="Optional notes"></div>
+        <button class="btn btn-add form-submit" type="button">Add Order</button>
+      </form>
+    </section>
+  </main>
+</div>
+</body>
+</html>

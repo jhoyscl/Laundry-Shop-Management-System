@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Shop Manager — Staff</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+ 
+  <input type="checkbox" id="menu-state" class="menu-state" aria-label="Toggle Main Menu">
+
+  <header class="topbar">
+    <label class="menu-toggle" for="menu-state" aria-label="Open Main Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </label>
+    <input class="search" type="search" placeholder="Search..." aria-label="Search">
+    <button class="profile" type="button">User Profile</button>
+  </header>
+
+  <label class="drawer-backdrop" for="menu-state" aria-label="Close menu"></label>
+  <aside class="sidebar" id="sidebar" aria-label="Main Menu">
+    <label class="sidebar-close" for="menu-state" aria-label="Close menu">×</label>
+    <div class="sidebar-brand">Laundry Shop Management System</div>
+    <p class="sidebar-heading">Main Menu</p>
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="staff.html">Staff</a>
+        <a href="service_type.html">Service Type</a>
+        <a href="laundry-orders.html">Laundry Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+  </aside>
+
+  <main class="content staff-content" id="staff">
+    <div class="heading-row">
+      <h1>Staff</h1>
+    </div>
+    <div class="table-wrap staff-table-wrap">
+      <table class="staff-table">
+        <thead>
+          <tr><th>ID</th><th>Name</th><th>Role</th><th>Phone</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Maria Santos</td><td>Cashier</td><td>09171234567</td><td><span class="status-active">Active</span></td><td><button class="btn btn-edit" type="button">Edit</button></td></tr>
+          <tr><td>2</td><td>Juan Dela Cruz</td><td>Laundry Attendant</td><td>09181234567</td><td><span class="status-active">Active</span></td><td><button class="btn btn-edit" type="button">Edit</button></td></tr>
+          <tr><td>3</td><td>Ana Reyes</td><td>Manager</td><td>09191234567</td><td><span class="status-inactive">Inactive</span></td><td><button class="btn btn-edit" type="button">Edit</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <section class="form-panel">
+      <h2>Add Staff</h2>
+      <form class="form-grid">
+        <input type="text" placeholder="Full name" aria-label="Full name">
+        <select class="staff-role" aria-label="Staff role">
+          <option value="" selected disabled>Select role</option>
+          <option>Cashier</option>
+          <option>Laundry Attendant</option>
+          <option>Manager</option>
+        </select>
+        <input type="tel" placeholder="Phone" aria-label="Phone">
+        <button class="btn btn-add" type="button">Add Staff</button>
+      </form>
+    </section>
+  </main>
+</div>
+</body>
+</html>

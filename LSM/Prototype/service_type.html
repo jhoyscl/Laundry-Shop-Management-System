@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laundry Shop Manager — Service Type</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <input type="checkbox" id="menu-state" class="menu-state" aria-label="Toggle Main Menu">
+
+  <header class="topbar">
+    <label class="menu-toggle" for="menu-state" aria-label="Open Main Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+    </label>
+    <input class="search" type="search" placeholder="Search..." aria-label="Search">
+    <button class="profile" type="button">User Profile</button>
+  </header>
+
+  <label class="drawer-backdrop" for="menu-state" aria-label="Close menu"></label>
+  <aside class="sidebar" id="sidebar" aria-label="Main Menu">
+    <label class="sidebar-close" for="menu-state" aria-label="Close menu">×</label>
+    <div class="sidebar-brand">Laundry Shop Management System</div>
+    <p class="sidebar-heading">Main Menu</p>
+    <nav class="sidebar-nav">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="customers.html">Customers</a>
+        <a href="services.html">Services</a>
+        <a href="staff.html">Staff</a>
+        <a class="active" href="service_type.html">Service Type</a>
+        <a href="laundry-orders.html">Laundry Orders</a>
+        <a href="payments.html">Payments</a>
+    </nav>
+  </aside>
+
+  <main class="content service-type-content" id="service-type">
+    <div class="heading-row">
+      <h1>Service Type</h1>
+    </div>
+
+    <div class="table-wrap">
+      <table class="service-type-table">
+        <thead>
+          <tr><th>ID</th><th>Service Type</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Laundry</td>
+            <td><div class="service-type-actions"><button class="btn btn-delete-type" type="button">Delete</button></div></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Specialty</td>
+            <td><div class="service-type-actions"><button class="btn btn-delete-type" type="button">Delete</button></div></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Bedding</td>
+            <td><div class="service-type-actions"><button class="btn btn-delete-type" type="button">Delete</button></div></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Finishing</td>
+            <td><div class="service-type-actions"><button class="btn btn-delete-type" type="button">Delete</button></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="service-type-form">
+      <h2>Add Service Type</h2>
+      <div class="service-type-form-row">
+        <input type="text" placeholder="Service type name" aria-label="Service type name">
+        <button class="btn btn-add-type" type="button">Add Service Type</button>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
